@@ -59,7 +59,7 @@
             color: #38bdf8;
         }
 
-        /* Sticky Navigation */
+        /* Header Navigation */
         header {
             position: sticky;
             top: 0;
@@ -113,6 +113,7 @@
             font-weight: 500;
             font-size: 0.95rem;
             transition: var(--transition);
+            cursor: pointer;
         }
 
         .nav-links a:hover {
@@ -200,7 +201,7 @@
             box-shadow: var(--shadow-lg);
         }
 
-        /* Domain Verification Notice Banner */
+        /* Verification Notice Card */
         .notice-card {
             max-width: 1300px;
             margin: -2rem auto 4rem;
@@ -315,44 +316,6 @@
             color: var(--primary-accent);
         }
 
-        /* Full Policy Pages Container */
-        .policy-section {
-            background: #ffffff;
-            padding: 3.5rem;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-sm);
-            margin-bottom: 3rem;
-        }
-
-        .policy-section h2 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 1rem;
-        }
-
-        .policy-meta {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-        }
-
-        .policy-content h3 {
-            font-size: 1.3rem;
-            margin: 1.8rem 0 0.8rem;
-        }
-
-        .policy-content p, .policy-content ul {
-            margin-bottom: 1rem;
-            color: var(--text-main);
-        }
-
-        .policy-content ul {
-            padding-left: 1.5rem;
-        }
-
-        /* Form styling */
         .contact-form {
             display: flex;
             flex-direction: column;
@@ -366,11 +329,6 @@
             border-radius: 8px;
             font-family: inherit;
             font-size: 1rem;
-        }
-
-        .form-group input:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-accent);
         }
 
         /* Footer */
@@ -419,6 +377,7 @@
             color: #cbd5e1;
             text-decoration: none;
             transition: var(--transition);
+            cursor: pointer;
         }
 
         .footer-col ul li a:hover {
@@ -438,6 +397,74 @@
             font-size: 0.9rem;
         }
 
+        /* Dedicated Policy Modal Sub-Page Styles */
+        .modal-page {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 3rem 1rem;
+        }
+
+        .modal-content {
+            background: #ffffff;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: var(--light-bg);
+            border: 1px solid var(--border);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            background: var(--primary-accent);
+            color: white;
+        }
+
+        .policy-meta {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+        }
+
+        .policy-content h3 {
+            font-size: 1.3rem;
+            margin: 1.8rem 0 0.8rem;
+        }
+
+        .policy-content p, .policy-content ul {
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .policy-content ul {
+            padding-left: 1.5rem;
+        }
+
         @media (max-width: 900px) {
             .hero-container, .footer-grid {
                 grid-template-columns: 1fr;
@@ -450,12 +477,12 @@
 </head>
 <body>
 
-    <!-- Top Domain & Entity Compliance Bar -->
+    <!-- Official Banner -->
     <div class="top-banner">
         <strong>Official Notice:</strong> <code>quiethelpinc.bond</code> is an officially recognized website domain operated by <strong>Quiet Help Inc.</strong> (EIN: 85-0600914).
     </div>
 
-    <!-- Header Navigation -->
+    <!-- Main Navigation Header -->
     <header>
         <div class="nav-container">
             <a href="#" class="logo">
@@ -465,12 +492,15 @@
             <ul class="nav-links">
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#programs">Programs</a></li>
-                <li><a href="#privacy-policy">Privacy Policy</a></li>
-                <li><a href="#terms-of-use">Terms of Use</a></li>
+                <li><a href="#impact">Our Impact</a></li>
+                <li><a onclick="openModal('privacyModal')">Privacy Policy</a></li>
+                <li><a onclick="openModal('termsModal')">Terms of Use</a></li>
                 <li><a href="#contact" class="btn btn-primary">Contact Us</a></li>
             </ul>
         </div>
     </header>
+
+    <!-- LANDING PAGE CONTENT (Exclusively Non-Profit Information) -->
 
     <!-- Hero Section -->
     <section class="hero">
@@ -495,9 +525,9 @@
     <!-- Google Workspace / Official Domain Notice Box -->
     <div style="padding: 0 5%;">
         <div class="notice-card">
-            <h3>Google Workspace for Nonprofits & Organization Status</h3>
+            <h3>Google Workspace for Nonprofits Verification Notice</h3>
             <p>
-                <strong>Quiet Help Inc.</strong> (EIN: 85-0600914) formally confirms that <strong>quiethelpinc.bond</strong> is our primary organizational website and communications domain. All organization correspondence and Google Workspace accounts are registered under <code>query@quiethelpinc.bond</code>[cite: 1].
+                <strong>Quiet Help Inc.</strong> (EIN: 85-0600914) formally confirms that <strong>quiethelpinc.bond</strong> is our primary organizational website and communications domain[cite: 1]. All organization correspondence and Google Workspace accounts are registered under <code>query@quiethelpinc.bond</code>[cite: 1].
             </p>
         </div>
     </div>
@@ -566,95 +596,24 @@
         </div>
     </section>
 
-    <!-- FULL PRIVACY POLICY PAGE SECTION -->
-    <section id="privacy-policy" class="section">
-        <div class="policy-section">
-            <h2>Full Privacy Policy</h2>
-            <div class="policy-meta">
-                <strong>Organization:</strong> Quiet Help Inc. (EIN: 85-0600914) | 
-                <strong>Domain:</strong> quiethelpinc.bond | 
-                <strong>Effective Date:</strong> January 1, 2026
-            </div>
-            <div class="policy-content">
-                <p>Quiet Help Inc. ("we," "our," or "us") operates the website <code>quiethelpinc.bond</code>. We are deeply committed to protecting the privacy and confidentiality of our visitors, donors, volunteers, and program applicants.</p>
-
-                <h3>1. Information We Collect</h3>
-                <p>We collect personal information that you voluntarily provide to us when contacting us, requesting assistance, or interacting with our organization. This includes:</p>
-                <ul>
-                    <li><strong>Contact Details:</strong> Your name, email address (e.g., <code>query@quiethelpinc.bond</code>), phone number, and physical mailing address.</li>
-                    <li><strong>Application Information:</strong> Information submitted through our program assistance forms.</li>
-                    <li><strong>Technical Data:</strong> Non-identifying IP addresses, browser types, and access logs collected automatically to preserve website security and performance.</li>
-                </ul>
-
-                <h3>2. How We Use Your Information</h3>
-                <p>Quiet Help Inc. uses collected information strictly for legitimate organizational purposes:</p>
-                <ul>
-                    <li>To evaluate and fulfill requests for emergency financial grants or aid.</li>
-                    <li>To communicate directly regarding program updates or organizational news.</li>
-                    <li>To comply with federal 501(c)(3) compliance and tax-reporting regulations.</li>
-                </ul>
-
-                <h3>3. Confidentiality and Information Sharing</h3>
-                <p>We maintain strict privacy controls. <strong>Quiet Help Inc. does not sell, rent, lease, or trade personal data or donor information to any third parties under any circumstances.</strong> Data is shared only with trusted third-party service providers who directly enable our operations (e.g., email delivery, web hosting) under confidential contracts.</p>
-
-                <h3>4. Contact Regarding Privacy</h3>
-                <p>If you have questions regarding this Privacy Policy or wish to request data removal, please contact our Privacy Coordinator at:</p>
-                <p>
-                    <strong>Quiet Help Inc.</strong><br>
-                    90 Woodbridge Center Drive, Suite 505, Woodbridge, NJ 07095<br>
-                    Email: <a href="mailto:query@quiethelpinc.bond">query@quiethelpinc.bond</a>
-                </p>
-            </div>
+    <!-- Impact Section -->
+    <section id="impact" class="section">
+        <div class="section-header">
+            <h2>Our Community Impact</h2>
+            <p>Direct actions transforming lives quietly and effectively across our region.</p>
         </div>
-    </section>
-
-    <!-- FULL TERMS OF USE PAGE SECTION -->
-    <section id="terms-of-use" class="section">
-        <div class="policy-section">
-            <h2>Full Terms of Use</h2>
-            <div class="policy-meta">
-                <strong>Organization:</strong> Quiet Help Inc. (EIN: 85-0600914) | 
-                <strong>Domain:</strong> quiethelpinc.bond | 
-                <strong>Effective Date:</strong> January 1, 2026
+        <div class="grid-3">
+            <div style="text-align: center; padding: 2.5rem; background: #ffffff; border-radius: 16px; border: 1px solid var(--border);">
+                <h3 style="font-size: 3rem; color: var(--primary-accent); margin-bottom: 0.5rem;">500+</h3>
+                <p><strong>Families Supported</strong><br>Receiving direct food and emergency supplies.</p>
             </div>
-            <div class="policy-content">
-                <p>Welcome to <code>quiethelpinc.bond</code>. By accessing or using this website, you agree to be bound by these full Terms of Use and all applicable laws and regulations.</p>
-
-                <h3>1. Non-Profit Status and Purpose</h3>
-                <p>Quiet Help Inc. is a registered 501(c)(3) non-profit organization operating under Employer Identification Number (EIN) 85-0600914. This website is created and operated solely for non-profit charitable, informational, and community assistance purposes.</p>
-
-                <h3>2. Acceptable Use</h3>
-                <p>Users agree to use this site strictly for lawful purposes. You agree not to submit fraudulent assistance applications, attempt unauthorized system access, or use official contacts (such as <code>query@quiethelpinc.bond</code>) for unauthorized advertising or spam.</p>
-
-                <h3>3. Intellectual Property</h3>
-                <p>All original content, logos, branding, graphics, and written materials on <code>quiethelpinc.bond</code> are the property of Quiet Help Inc. Content may not be republished or distributed without explicit written consent.</p>
-
-                <h3>4. Disclaimer & Limitation of Liability</h3>
-                <p>All information on this site is provided "as is" without warranty of any kind. While Quiet Help Inc. strives to maintain modern accuracy, we shall not be held liable for any damages resulting from reliance on site content or temporary site downtime.</p>
-
-                <h3>5. Contact Information</h3>
-                <p>For questions concerning these Terms of Use, please reach out directly to:</p>
-                <p>
-                    <strong>Quiet Help Inc.</strong><br>
-                    90 Woodbridge Center Drive, Suite 505, Woodbridge, NJ 07095<br>
-                    Email: <a href="mailto:query@quiethelpinc.bond">query@quiethelpinc.bond</a>
-                </p>
+            <div style="text-align: center; padding: 2.5rem; background: #ffffff; border-radius: 16px; border: 1px solid var(--border);">
+                <h3 style="font-size: 3rem; color: var(--secondary); margin-bottom: 0.5rem;">100%</h3>
+                <p><strong>Confidential Support</strong><br>Dignified aid delivery with zero public exposure.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- FULL NONDISCRIMINATION POLICY SECTION -->
-    <section id="nondiscrimination" class="section">
-        <div class="policy-section">
-            <h2>Nondiscrimination Policy</h2>
-            <div class="policy-meta">
-                <strong>Organization:</strong> Quiet Help Inc. (EIN: 85-0600914) | 
-                <strong>Domain:</strong> quiethelpinc.bond
-            </div>
-            <div class="policy-content">
-                <p>Quiet Help Inc. is committed to maintaining an environment free from discrimination across all aspects of its operations.</p>
-                <p>Quiet Help Inc. does not and shall not discriminate on the basis of race, color, religion (creed), gender, gender expression, age, national origin (ancestry), disability, marital status, sexual orientation, or military status in any of its activities or operations.</p>
-                <p>These activities include, but are not limited to, program candidate evaluation, distribution of charitable grants, selection of volunteers and vendors, and employment practices.</p>
+            <div style="text-align: center; padding: 2.5rem; background: #ffffff; border-radius: 16px; border: 1px solid var(--border);">
+                <h3 style="font-size: 3rem; color: var(--accent); margin-bottom: 0.5rem;">24/48h</h3>
+                <p><strong>Rapid Response</strong><br>Fast turnarounds for emergency grant reviews.</p>
             </div>
         </div>
     </section>
@@ -732,9 +691,9 @@
             <div class="footer-col">
                 <h4>Legal & Policies</h4>
                 <ul>
-                    <li><a href="#privacy-policy">Privacy Policy</a></li>
-                    <li><a href="#terms-of-use">Terms of Use</a></li>
-                    <li><a href="#nondiscrimination">Nondiscrimination</a></li>
+                    <li><a onclick="openModal('privacyModal')">Privacy Policy</a></li>
+                    <li><a onclick="openModal('termsModal')">Terms of Use</a></li>
+                    <li><a onclick="openModal('nondiscrimModal')">Nondiscrimination Policy</a></li>
                 </ul>
             </div>
 
@@ -754,6 +713,126 @@
             <div><code>quiethelpinc.bond</code> is an official domain of Quiet Help Inc. (EIN: 85-0600914)[cite: 1]</div>
         </div>
     </footer>
+
+
+    <!-- DEDICATED FULL POLICY PAGES (MODALS) -->
+
+    <!-- Modal 1: Privacy Policy Page -->
+    <div id="privacyModal" class="modal-page">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('privacyModal')">&times;</button>
+            <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Full Privacy Policy</h2>
+            <div class="policy-meta">
+                <strong>Organization:</strong> Quiet Help Inc. (EIN: 85-0600914) | 
+                <strong>Domain:</strong> quiethelpinc.bond | 
+                <strong>Effective Date:</strong> January 1, 2026
+            </div>
+            <div class="policy-content">
+                <p>Quiet Help Inc. ("we," "our," or "us") operates the website <code>quiethelpinc.bond</code>. We are deeply committed to protecting the privacy and confidentiality of our visitors, donors, volunteers, and program applicants.</p>
+
+                <h3>1. Information We Collect</h3>
+                <p>We collect personal information that you voluntarily provide to us when contacting us, requesting assistance, or interacting with our organization. This includes:</p>
+                <ul>
+                    <li><strong>Contact Details:</strong> Your name, email address (e.g., <code>query@quiethelpinc.bond</code>), phone number, and physical mailing address.</li>
+                    <li><strong>Application Information:</strong> Information submitted through our program assistance forms.</li>
+                    <li><strong>Technical Data:</strong> Non-identifying IP addresses, browser types, and access logs collected automatically to preserve website security and performance.</li>
+                </ul>
+
+                <h3>2. How We Use Your Information</h3>
+                <p>Quiet Help Inc. uses collected information strictly for legitimate organizational purposes:</p>
+                <ul>
+                    <li>To evaluate and fulfill requests for emergency financial grants or aid.</li>
+                    <li>To communicate directly regarding program updates or organizational news.</li>
+                    <li>To comply with federal 501(c)(3) compliance and tax-reporting regulations.</li>
+                </ul>
+
+                <h3>3. Confidentiality and Information Sharing</h3>
+                <p>We maintain strict privacy controls. <strong>Quiet Help Inc. does not sell, rent, lease, or trade personal data or donor information to any third parties under any circumstances.</strong> Data is shared only with trusted third-party service providers who directly enable our operations (e.g., email delivery, web hosting) under confidential contracts.</p>
+
+                <h3>4. Contact Regarding Privacy</h3>
+                <p>If you have questions regarding this Privacy Policy or wish to request data removal, please contact our Privacy Coordinator at:</p>
+                <p>
+                    <strong>Quiet Help Inc.</strong><br>
+                    90 Woodbridge Center Drive, Suite 505, Woodbridge, NJ 07095<br>
+                    Email: <a href="mailto:query@quiethelpinc.bond">query@quiethelpinc.bond</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Terms of Use Page -->
+    <div id="termsModal" class="modal-page">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('termsModal')">&times;</button>
+            <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Full Terms of Use</h2>
+            <div class="policy-meta">
+                <strong>Organization:</strong> Quiet Help Inc. (EIN: 85-0600914) | 
+                <strong>Domain:</strong> quiethelpinc.bond | 
+                <strong>Effective Date:</strong> January 1, 2026
+            </div>
+            <div class="policy-content">
+                <p>Welcome to <code>quiethelpinc.bond</code>. By accessing or using this website, you agree to be bound by these full Terms of Use and all applicable laws and regulations.</p>
+
+                <h3>1. Non-Profit Status and Purpose</h3>
+                <p>Quiet Help Inc. is a registered 501(c)(3) non-profit organization operating under Employer Identification Number (EIN) 85-0600914. This website is created and operated solely for non-profit charitable, informational, and community assistance purposes.</p>
+
+                <h3>2. Acceptable Use</h3>
+                <p>Users agree to use this site strictly for lawful purposes. You agree not to submit fraudulent assistance applications, attempt unauthorized system access, or use official contacts (such as <code>query@quiethelpinc.bond</code>) for unauthorized advertising or spam.</p>
+
+                <h3>3. Intellectual Property</h3>
+                <p>All original content, logos, branding, graphics, and written materials on <code>quiethelpinc.bond</code> are the property of Quiet Help Inc. Content may not be republished or distributed without explicit written consent.</p>
+
+                <h3>4. Disclaimer & Limitation of Liability</h3>
+                <p>All information on this site is provided "as is" without warranty of any kind. While Quiet Help Inc. strives to maintain modern accuracy, we shall not be held liable for any damages resulting from reliance on site content or temporary site downtime.</p>
+
+                <h3>5. Contact Information</h3>
+                <p>For questions concerning these Terms of Use, please reach out directly to:</p>
+                <p>
+                    <strong>Quiet Help Inc.</strong><br>
+                    90 Woodbridge Center Drive, Suite 505, Woodbridge, NJ 07095<br>
+                    Email: <a href="mailto:query@quiethelpinc.bond">query@quiethelpinc.bond</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Nondiscrimination Policy Page -->
+    <div id="nondiscrimModal" class="modal-page">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('nondiscrimModal')">&times;</button>
+            <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Nondiscrimination Policy</h2>
+            <div class="policy-meta">
+                <strong>Organization:</strong> Quiet Help Inc. (EIN: 85-0600914) | 
+                <strong>Domain:</strong> quiethelpinc.bond
+            </div>
+            <div class="policy-content">
+                <p>Quiet Help Inc. is committed to maintaining an environment free from discrimination across all aspects of its operations.</p>
+                <p>Quiet Help Inc. does not and shall not discriminate on the basis of race, color, religion (creed), gender, gender expression, age, national origin (ancestry), disability, marital status, sexual orientation, or military status in any of its activities or operations.</p>
+                <p>These activities include, but are not limited to, program candidate evaluation, distribution of charitable grants, selection of volunteers and vendors, and employment practices.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to Handle Opening / Closing Policy Sub-Pages -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal if user clicks outside of modal content
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal-page')) {
+                event.target.style.display = "none";
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
 
 </body>
 </html>
