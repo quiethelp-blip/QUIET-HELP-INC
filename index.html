@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiet Help Inc. | Empowering Communities Through Discreet Support</title>
+    <title>Quiet Help Inc. | Official Non-Profit Organization</title>
     <meta name="description" content="Quiet Help Inc. (EIN: 85-0600914) provides compassionate, dignified assistance, essential supplies, and supportive community programs. Official domain: quiethelpinc.bond.">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1e3a8a;
-            --primary-light: #3b82f6;
+            --primary: #0f172a;
+            --primary-accent: #2563eb;
             --secondary: #0d9488;
-            --accent: #f59e0b;
-            --dark: #0f172a;
-            --light: #f8fafc;
-            --white: #ffffff;
-            --gray-100: #f1f5f9;
-            --gray-200: #e2e8f0;
-            --gray-600: #475569;
-            --gray-800: #1e293b;
-            --shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+            --accent: #d97706;
+            --light-bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #334155;
+            --text-dark: #0f172a;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -29,41 +29,44 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            color: var(--gray-800);
-            background-color: var(--light);
-            line-height: 1.6;
-            overflow-x: hidden;
+            color: var(--text-main);
+            background-color: var(--light-bg);
+            line-height: 1.7;
         }
 
-        h1, h2, h3, .serif {
+        h1, h2, h3, h4, .serif {
             font-family: 'Playfair Display', serif;
+            color: var(--text-dark);
         }
 
-        /* Top Bar for Verification & Compliance */
+        /* Top Compliance Banner */
         .top-banner {
-            background-color: var(--dark);
-            color: var(--gray-200);
+            background-color: var(--primary);
+            color: #f1f5f9;
             font-size: 0.85rem;
-            padding: 8px 5%;
+            padding: 10px 5%;
             text-align: center;
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
-        .top-banner a {
-            color: var(--accent);
-            text-decoration: none;
+        .top-banner strong {
+            color: #38bdf8;
         }
 
-        /* Navigation */
+        /* Sticky Navigation */
         header {
             position: sticky;
             top: 0;
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            border-bottom: 1px solid var(--border);
         }
 
         .nav-container {
@@ -71,51 +74,53 @@
             justify-content: space-between;
             align-items: center;
             padding: 1.2rem 5%;
-            max-width: 1280px;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 1.5rem;
+            gap: 12px;
+            font-size: 1.4rem;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--text-dark);
             text-decoration: none;
         }
 
-        .logo-icon {
-            width: 38px;
-            height: 38px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            border-radius: 50%;
+        .logo-badge {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-accent), var(--secondary));
+            color: white;
+            border-radius: 10px;
             display: grid;
             place-items: center;
-            color: white;
+            font-weight: 700;
             font-size: 1.2rem;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.8rem;
             list-style: none;
             align-items: center;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: var(--gray-800);
+            color: var(--text-main);
             font-weight: 500;
+            font-size: 0.95rem;
             transition: var(--transition);
         }
 
         .nav-links a:hover {
-            color: var(--primary-light);
+            color: var(--primary-accent);
         }
 
         .btn {
-            padding: 0.75rem 1.5rem;
+            padding: 0.8rem 1.6rem;
             border-radius: 50px;
             font-weight: 600;
             text-decoration: none;
@@ -123,38 +128,39 @@
             transition: var(--transition);
             border: none;
             cursor: pointer;
+            font-size: 0.95rem;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            color: var(--white);
-            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+            background: var(--primary-accent);
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(30, 58, 138, 0.4);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
         }
 
-        .btn-secondary {
-            background: var(--gray-100);
-            color: var(--dark);
+        .btn-outline {
+            border: 2px solid var(--primary-accent);
+            color: var(--primary-accent);
+            background: transparent;
         }
 
-        .btn-secondary:hover {
-            background: var(--gray-200);
+        .btn-outline:hover {
+            background: var(--primary-accent);
+            color: #ffffff;
         }
 
         /* Hero Section */
         .hero {
-            position: relative;
-            padding: 6rem 5% 8rem;
-            background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
-            overflow: hidden;
+            padding: 5rem 5% 6rem;
+            background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
         }
 
         .hero-container {
-            max-width: 1280px;
+            max-width: 1300px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -162,178 +168,243 @@
             align-items: center;
         }
 
-        .hero-content h1 {
+        .hero-text h1 {
             font-size: 3.5rem;
             line-height: 1.15;
-            color: var(--dark);
             margin-bottom: 1.5rem;
         }
 
-        .hero-content p {
-            font-size: 1.2rem;
-            color: var(--gray-600);
+        .hero-text p {
+            font-size: 1.15rem;
+            color: var(--text-light);
             margin-bottom: 2rem;
         }
 
-        .hero-image-grid {
-            position: relative;
+        .hero-gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
         }
 
-        .hero-img {
+        .hero-gallery img {
             width: 100%;
-            height: 250px;
+            height: 230px;
             object-fit: cover;
             border-radius: 16px;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-sm);
             transition: var(--transition);
         }
 
-        .hero-img:hover {
-            transform: scale(1.03);
+        .hero-gallery img:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-lg);
         }
 
-        .hero-img-offset {
-            margin-top: 30px;
+        /* Domain Verification Notice Banner */
+        .notice-card {
+            max-width: 1300px;
+            margin: -2rem auto 4rem;
+            background: var(--card-bg);
+            border-left: 5px solid var(--primary-accent);
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
         }
 
-        /* Verification Badge Callout */
-        .verification-card {
-            background: var(--white);
-            border-left: 4px solid var(--secondary);
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            margin: 3rem auto;
-            max-width: 1280px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
+        .notice-card h3 {
+            font-size: 1.1rem;
+            color: var(--primary-accent);
+            margin-bottom: 0.3rem;
         }
 
-        /* Content Sections */
+        /* Section Layouts */
         .section {
-            padding: 5rem 5%;
-            max-width: 1280px;
+            padding: 6rem 5%;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
-        .section-title {
+        .section-header {
             text-align: center;
-            margin-bottom: 3.5rem;
+            margin-bottom: 4rem;
         }
 
-        .section-title h2 {
+        .section-header h2 {
             font-size: 2.5rem;
-            color: var(--dark);
             margin-bottom: 1rem;
         }
 
-        .section-title p {
-            color: var(--gray-600);
-            max-width: 600px;
+        .section-header p {
+            color: var(--text-light);
+            max-width: 650px;
             margin: 0 auto;
+            font-size: 1.1rem;
         }
 
-        /* Cards Grid */
+        /* Grid Layouts */
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         .card {
-            background: var(--white);
+            background: var(--card-bg);
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
             transition: var(--transition);
-            border: 1px solid var(--gray-200);
         }
 
         .card:hover {
             transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .card-img {
+        .card img {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
         }
 
         .card-body {
-            padding: 1.8rem;
+            padding: 2rem;
         }
 
         .card-body h3 {
-            margin-bottom: 0.75rem;
-            color: var(--dark);
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
         }
 
-        /* Tabbed Policy & Content Sections */
-        .tab-container {
-            background: var(--white);
-            border-radius: 16px;
-            box-shadow: var(--shadow);
+        /* Contact Box Info */
+        .contact-box {
+            background: #ffffff;
             padding: 2.5rem;
-            margin-top: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
         }
 
-        .tab-menu {
+        .contact-box h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-detail {
+            margin-bottom: 1.2rem;
             display: flex;
-            gap: 1rem;
-            border-bottom: 2px solid var(--gray-200);
-            margin-bottom: 2rem;
-            overflow-x: auto;
+            flex-direction: column;
         }
 
-        .tab-btn {
-            padding: 0.75rem 1.5rem;
-            border: none;
-            background: none;
-            font-size: 1rem;
+        .contact-detail span {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
             font-weight: 600;
-            color: var(--gray-600);
-            cursor: pointer;
-            border-bottom: 3px solid transparent;
-            transition: var(--transition);
         }
 
-        .tab-btn.active {
-            color: var(--primary);
-            border-bottom-color: var(--primary);
+        .contact-detail strong, .contact-detail a {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            text-decoration: none;
         }
 
-        .tab-content {
-            display: none;
+        .contact-detail a:hover {
+            color: var(--primary-accent);
         }
 
-        .tab-content.active {
-            display: block;
+        /* Full Policy Pages Container */
+        .policy-section {
+            background: #ffffff;
+            padding: 3.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 3rem;
+        }
+
+        .policy-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 1rem;
+        }
+
+        .policy-meta {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .policy-content h3 {
+            font-size: 1.3rem;
+            margin: 1.8rem 0 0.8rem;
+        }
+
+        .policy-content p, .policy-content ul {
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .policy-content ul {
+            padding-left: 1.5rem;
+        }
+
+        /* Form styling */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-accent);
         }
 
         /* Footer */
         footer {
-            background: var(--dark);
-            color: var(--gray-200);
-            padding: 4rem 5% 2rem;
+            background: var(--primary);
+            color: #cbd5e1;
+            padding: 5rem 5% 2rem;
         }
 
         .footer-grid {
-            max-width: 1280px;
+            max-width: 1300px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 2fr repeat(3, 1fr);
             gap: 3rem;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand h3 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
         }
 
         .footer-col h4 {
-            color: var(--white);
-            margin-bottom: 1.2rem;
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
         }
 
         .footer-col ul {
@@ -341,21 +412,21 @@
         }
 
         .footer-col ul li {
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.8rem;
         }
 
         .footer-col ul li a {
-            color: var(--gray-200);
+            color: #cbd5e1;
             text-decoration: none;
             transition: var(--transition);
         }
 
         .footer-col ul li a:hover {
-            color: var(--white);
+            color: #ffffff;
         }
 
         .footer-bottom {
-            max-width: 1280px;
+            max-width: 1300px;
             margin: 0 auto;
             padding-top: 2rem;
             border-top: 1px solid rgba(255,255,255,0.1);
@@ -367,36 +438,35 @@
             font-size: 0.9rem;
         }
 
-        /* Responsive */
         @media (max-width: 900px) {
-            .hero-container {
+            .hero-container, .footer-grid {
                 grid-template-columns: 1fr;
             }
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
+            .nav-links {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Official Nonprofits Verification Bar -->
+    <!-- Top Domain & Entity Compliance Bar -->
     <div class="top-banner">
-        <strong>Official Notice:</strong> <code>quiethelpinc.bond</code> is an officially recognized web domain operated by <strong>Quiet Help Inc.</strong> (EIN: 85-0600914).
+        <strong>Official Notice:</strong> <code>quiethelpinc.bond</code> is an officially recognized website domain operated by <strong>Quiet Help Inc.</strong> (EIN: 85-0600914).
     </div>
 
     <!-- Header Navigation -->
     <header>
         <div class="nav-container">
             <a href="#" class="logo">
-                <div class="logo-icon">Q</div>
+                <div class="logo-badge">Q</div>
                 Quiet Help Inc.
             </a>
             <ul class="nav-links">
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#programs">Programs</a></li>
-                <li><a href="#impact">Impact</a></li>
-                <li><a href="#policies">Policies & Governance</a></li>
+                <li><a href="#privacy-policy">Privacy Policy</a></li>
+                <li><a href="#terms-of-use">Terms of Use</a></li>
                 <li><a href="#contact" class="btn btn-primary">Contact Us</a></li>
             </ul>
         </div>
@@ -405,234 +475,285 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
-            <div class="hero-content">
-                <h1>Providing Compassionate Assistance Without Noise</h1>
-                <p>Quiet Help Inc. is a registered 501(c)(3) nonprofit dedicated to offering immediate support, essential supplies, and long-term community empowerment with dignity and confidentiality.</p>
+            <div class="hero-text">
+                <h1>Compassionate, Dignified Aid for Communities in Need</h1>
+                <p>Quiet Help Inc. is a registered 501(c)(3) nonprofit delivering direct relief, emergency assistance, and vital resources without barriers, stigma, or complexity.</p>
                 <div style="display: flex; gap: 1rem;">
-                    <a href="#programs" class="btn btn-primary">Explore Programs</a>
-                    <a href="#contact" class="btn btn-secondary">Get Support</a>
+                    <a href="#programs" class="btn btn-primary">Our Programs</a>
+                    <a href="#contact" class="btn btn-outline">Get Support</a>
                 </div>
             </div>
-            <div class="hero-image-grid">
-                <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=600&q=80" alt="Community Support" class="hero-img">
-                <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=600&q=80" alt="Volunteers Helping" class="hero-img hero-img-offset">
-                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=600&q=80" alt="Food Relief" class="hero-img">
-                <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=600&q=80" alt="Youth Education" class="hero-img hero-img-offset">
+            <div class="hero-gallery">
+                <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=800&q=80" alt="Community Outreach">
+                <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=800&q=80" alt="Volunteers at Work">
+                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80" alt="Relief Supplies Distribution">
+                <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80" alt="Supportive Services">
             </div>
         </div>
     </section>
 
-    <!-- Domain & Registration Statement (Mandatory for Google Workspace for Nonprofits) -->
+    <!-- Google Workspace / Official Domain Notice Box -->
     <div style="padding: 0 5%;">
-        <div class="verification-card">
-            <div>
-                <h4 style="color: var(--primary);">Google for Nonprofits Compliance Notice</h4>
-                <p style="font-size: 0.95rem; margin-top: 0.25rem;">
-                    <strong>Quiet Help Inc.</strong> (EIN: 85-0600914) explicitly verifies that <strong>quiethelpinc.bond</strong> is our primary organizational domain name, managed directly for official operations and communication via <code>query@quiethelpinc.bond</code>.
-                </p>
-            </div>
+        <div class="notice-card">
+            <h3>Google Workspace for Nonprofits & Organization Status</h3>
+            <p>
+                <strong>Quiet Help Inc.</strong> (EIN: 85-0600914) formally confirms that <strong>quiethelpinc.bond</strong> is our primary organizational website and communications domain. All organization correspondence and Google Workspace accounts are registered under <code>query@quiethelpinc.bond</code>[cite: 1].
+            </p>
         </div>
     </div>
 
     <!-- About Section -->
     <section id="about" class="section">
-        <div class="section-title">
-            <h2>Who We Are</h2>
-            <p>Guided by dignity, respect, and direct action, Quiet Help Inc. serves individuals and families facing unexpected hardships.</p>
+        <div class="section-header">
+            <h2>About Quiet Help Inc.</h2>
+            <p>Providing direct support and empowering communities through transparent, respectful non-profit initiatives.</p>
         </div>
         <div class="grid-3">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?auto=format&fit=crop&w=600&q=80" alt="Our Mission" class="card-img">
+                <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?auto=format&fit=crop&w=800&q=80" alt="Our Mission">
                 <div class="card-body">
                     <h3>Our Mission</h3>
-                    <p>To deliver discreet, fast-acting financial and logistical assistance to vulnerable individuals, preventing systemic distress before it begins.</p>
+                    <p>To extend rapid, compassionate relief and financial assistance to individuals and families experiencing acute hardship, protecting personal dignity every step of the way.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80" alt="Our Vision" class="card-img">
+                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80" alt="Our Vision">
                 <div class="card-body">
                     <h3>Our Vision</h3>
-                    <p>A society where every person has immediate access to safety nets and essentials without bureaucracy, stigma, or barriers.</p>
+                    <p>A connected community where immediate assistance and emergency resources are accessible to everyone in need without unnecessary administrative delay.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&q=80" alt="Our Values" class="card-img">
+                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=80" alt="Core Values">
                 <div class="card-body">
                     <h3>Core Values</h3>
-                    <p>Transparency in governance, complete confidentiality for recipients, and radical empathy in all community interactions.</p>
+                    <p>Unwavering integrity, strict applicant confidentiality, equitable support distribution, and total operational transparency across all programs.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Programs Section -->
-    <section id="programs" class="section" style="background-color: var(--white); max-width: 100%;">
-        <div style="max-width: 1280px; margin: 0 auto;">
-            <div class="section-title">
-                <h2>Our Key Initiatives</h2>
-                <p>Direct assistance programs tailored to immediate human needs.</p>
+    <section id="programs" class="section" style="background: #ffffff; max-width: 100%;">
+        <div style="max-width: 1300px; margin: 0 auto;">
+            <div class="section-header">
+                <h2>Our Key Programs</h2>
+                <p>Designed to deliver direct relief and long-term empowerment to those we serve.</p>
             </div>
             <div class="grid-3">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?auto=format&fit=crop&w=600&q=80" alt="Emergency Relief" class="card-img">
+                    <img src="https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?auto=format&fit=crop&w=800&q=80" alt="Emergency Grants">
                     <div class="card-body">
                         <h3>Emergency Micro-Grants</h3>
-                        <p>Providing direct financial micro-grants for housing, utility assistance, and urgent medical needs to families facing sudden hardship.</p>
+                        <p>Providing swift financial support for vital needs including housing stability, utility relief, and emergency medical expense coverage.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=600&q=80" alt="Nutrition Support" class="card-img">
+                    <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?auto=format&fit=crop&w=800&q=80" alt="Essential Supplies">
                     <div class="card-body">
-                        <h3>Direct Nutrition & Food Security</h3>
-                        <p>Distributing essential nutritional boxes and grocery gift cards discreetly to underserved neighborhoods and homebound individuals.</p>
+                        <h3>Essential Aid & Supplies</h3>
+                        <p>Direct supply distribution offering essential nutritional packages, hygiene care kits, and emergency family resources.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Community Pathways" class="card-img">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Community Pathways">
                     <div class="card-body">
-                        <h3>Pathways to Independence</h3>
-                        <p>Mentorship, resume guidance, and skill-building workshops designed to empower individuals toward long-term financial self-sufficiency.</p>
+                        <h3>Community Pathways</h3>
+                        <p>Mentorship, employment guidance, and resource navigation to help individuals transition from immediate crisis to long-term independence.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Interactive Policies & Governance Tab Section -->
-    <section id="policies" class="section">
-        <div class="section-title">
-            <h2>Governance, Transparency & Policies</h2>
-            <p>Quiet Help Inc. operates under strict nonprofit compliance and data integrity standards.</p>
-        </div>
-
-        <div class="tab-container">
-            <div class="tab-menu">
-                <button class="tab-btn active" onclick="openTab(event, 'privacy')">Privacy Policy</button>
-                <button class="tab-btn" onclick="openTab(event, 'terms')">Terms of Service</button>
-                <button class="tab-btn" onclick="openTab(event, 'nondiscrim')">Nondiscrimination Policy</button>
-                <button class="tab-btn" onclick="openTab(event, 'google')">Google Workspace Verification</button>
+    <!-- FULL PRIVACY POLICY PAGE SECTION -->
+    <section id="privacy-policy" class="section">
+        <div class="policy-section">
+            <h2>Full Privacy Policy</h2>
+            <div class="policy-meta">
+                <strong>Organization:</strong> Quiet Help Inc. (EIN: 85-0600914) | 
+                <strong>Domain:</strong> quiethelpinc.bond | 
+                <strong>Effective Date:</strong> January 1, 2026
             </div>
+            <div class="policy-content">
+                <p>Quiet Help Inc. ("we," "our," or "us") operates the website <code>quiethelpinc.bond</code>. We are deeply committed to protecting the privacy and confidentiality of our visitors, donors, volunteers, and program applicants.</p>
 
-            <!-- Tab 1: Privacy Policy -->
-            <div id="privacy" class="tab-content active">
-                <h3>Privacy Policy</h3>
-                <p><em>Effective Date: January 1, 2026</em></p><br>
-                <p><strong>Quiet Help Inc.</strong> ("us", "we", or "our") operates <code>https://quiethelpinc.bond</code>. We respect your privacy and are committed to protecting personally identifiable information you may provide through our website.</p><br>
-                <p><strong>1. Information Collection:</strong> We collect non-personal browser data and personal information voluntarily submitted via forms (e.g., name, email address <code>query@quiethelpinc.bond</code>, phone number).</p><br>
-                <p><strong>2. Use of Data:</strong> Information collected is used strictly to fulfill assistance requests, communicate organizational updates, and process donations. We never sell, trade, or lease donor or applicant information to third parties.</p><br>
-                <p><strong>3. Data Protection:</strong> We implement standard encryption and security protocols to keep your personal data protected at all times.</p>
-            </div>
+                <h3>1. Information We Collect</h3>
+                <p>We collect personal information that you voluntarily provide to us when contacting us, requesting assistance, or interacting with our organization. This includes:</p>
+                <ul>
+                    <li><strong>Contact Details:</strong> Your name, email address (e.g., <code>query@quiethelpinc.bond</code>), phone number, and physical mailing address.</li>
+                    <li><strong>Application Information:</strong> Information submitted through our program assistance forms.</li>
+                    <li><strong>Technical Data:</strong> Non-identifying IP addresses, browser types, and access logs collected automatically to preserve website security and performance.</li>
+                </ul>
 
-            <!-- Tab 2: Terms of Service -->
-            <div id="terms" class="tab-content">
-                <h3>Terms of Service</h3>
-                <p><em>Effective Date: January 1, 2026</em></p><br>
-                <p>By accessing or using the website of <strong>Quiet Help Inc.</strong> at <code>quiethelpinc.bond</code>, you agree to comply with and be bound by the following terms:</p><br>
-                <p><strong>1. Nonprofit Purpose:</strong> This site is maintained exclusively for charitable and educational purposes in support of Quiet Help Inc. (EIN: 85-0600914).</p><br>
-                <p><strong>2. Intellectual Property:</strong> All site content, logos, and materials are owned by Quiet Help Inc. and may not be reproduced without explicit written permission.</p><br>
-                <p><strong>3. Limitation of Liability:</strong> Quiet Help Inc. provides site information on an "as-is" basis and shall not be liable for damages arising from site usage.</p>
-            </div>
+                <h3>2. How We Use Your Information</h3>
+                <p>Quiet Help Inc. uses collected information strictly for legitimate organizational purposes:</p>
+                <ul>
+                    <li>To evaluate and fulfill requests for emergency financial grants or aid.</li>
+                    <li>To communicate directly regarding program updates or organizational news.</li>
+                    <li>To comply with federal 501(c)(3) compliance and tax-reporting regulations.</li>
+                </ul>
 
-            <!-- Tab 3: Nondiscrimination -->
-            <div id="nondiscrim" class="tab-content">
-                <h3>Nondiscrimination Policy</h3>
-                <p><strong>Quiet Help Inc.</strong> does not and shall not discriminate on the basis of race, color, religion (creed), gender, gender expression, age, national origin (ancestry), disability, marital status, sexual orientation, or military status in any of its activities or operations.</p><br>
-                <p>These activities include, but are not limited to, the selection of volunteers and vendors, provision of services, and hiring or firing of staff.</p>
-            </div>
+                <h3>3. Confidentiality and Information Sharing</h3>
+                <p>We maintain strict privacy controls. <strong>Quiet Help Inc. does not sell, rent, lease, or trade personal data or donor information to any third parties under any circumstances.</strong> Data is shared only with trusted third-party service providers who directly enable our operations (e.g., email delivery, web hosting) under confidential contracts.</p>
 
-            <!-- Tab 4: Google Workspace Statement -->
-            <div id="google" class="tab-content">
-                <h3>Google for Nonprofits & Domain Connection Notice</h3>
-                <p>This statement confirms that <strong>Quiet Help Inc.</strong> (EIN: 85-0600914) owns, operates, and officially maintains the domain <strong>quiethelpinc.bond</strong>.</p><br>
-                <p>All Google Workspace for Nonprofits communications, administrative access, and support requests for this organization are managed using official email accounts attached to this domain (e.g., <code>query@quiethelpinc.bond</code>).</p>
+                <h3>4. Contact Regarding Privacy</h3>
+                <p>If you have questions regarding this Privacy Policy or wish to request data removal, please contact our Privacy Coordinator at:</p>
+                <p>
+                    <strong>Quiet Help Inc.</strong><br>
+                    90 Woodbridge Center Drive, Suite 505, Woodbridge, NJ 07095<br>
+                    Email: <a href="mailto:query@quiethelpinc.bond">query@quiethelpinc.bond</a>
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section" style="background-color: var(--white); max-width: 100%;">
-        <div style="max-width: 1280px; margin: 0 auto;">
-            <div class="section-title">
+    <!-- FULL TERMS OF USE PAGE SECTION -->
+    <section id="terms-of-use" class="section">
+        <div class="policy-section">
+            <h2>Full Terms of Use</h2>
+            <div class="policy-meta">
+                <strong>Organization:</strong> Quiet Help Inc. (EIN: 85-0600914) | 
+                <strong>Domain:</strong> quiethelpinc.bond | 
+                <strong>Effective Date:</strong> January 1, 2026
+            </div>
+            <div class="policy-content">
+                <p>Welcome to <code>quiethelpinc.bond</code>. By accessing or using this website, you agree to be bound by these full Terms of Use and all applicable laws and regulations.</p>
+
+                <h3>1. Non-Profit Status and Purpose</h3>
+                <p>Quiet Help Inc. is a registered 501(c)(3) non-profit organization operating under Employer Identification Number (EIN) 85-0600914. This website is created and operated solely for non-profit charitable, informational, and community assistance purposes.</p>
+
+                <h3>2. Acceptable Use</h3>
+                <p>Users agree to use this site strictly for lawful purposes. You agree not to submit fraudulent assistance applications, attempt unauthorized system access, or use official contacts (such as <code>query@quiethelpinc.bond</code>) for unauthorized advertising or spam.</p>
+
+                <h3>3. Intellectual Property</h3>
+                <p>All original content, logos, branding, graphics, and written materials on <code>quiethelpinc.bond</code> are the property of Quiet Help Inc. Content may not be republished or distributed without explicit written consent.</p>
+
+                <h3>4. Disclaimer & Limitation of Liability</h3>
+                <p>All information on this site is provided "as is" without warranty of any kind. While Quiet Help Inc. strives to maintain modern accuracy, we shall not be held liable for any damages resulting from reliance on site content or temporary site downtime.</p>
+
+                <h3>5. Contact Information</h3>
+                <p>For questions concerning these Terms of Use, please reach out directly to:</p>
+                <p>
+                    <strong>Quiet Help Inc.</strong><br>
+                    90 Woodbridge Center Drive, Suite 505, Woodbridge, NJ 07095<br>
+                    Email: <a href="mailto:query@quiethelpinc.bond">query@quiethelpinc.bond</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FULL NONDISCRIMINATION POLICY SECTION -->
+    <section id="nondiscrimination" class="section">
+        <div class="policy-section">
+            <h2>Nondiscrimination Policy</h2>
+            <div class="policy-meta">
+                <strong>Organization:</strong> Quiet Help Inc. (EIN: 85-0600914) | 
+                <strong>Domain:</strong> quiethelpinc.bond
+            </div>
+            <div class="policy-content">
+                <p>Quiet Help Inc. is committed to maintaining an environment free from discrimination across all aspects of its operations.</p>
+                <p>Quiet Help Inc. does not and shall not discriminate on the basis of race, color, religion (creed), gender, gender expression, age, national origin (ancestry), disability, marital status, sexual orientation, or military status in any of its activities or operations.</p>
+                <p>These activities include, but are not limited to, program candidate evaluation, distribution of charitable grants, selection of volunteers and vendors, and employment practices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Page Section -->
+    <section id="contact" class="section" style="background: #ffffff; max-width: 100%;">
+        <div style="max-width: 1300px; margin: 0 auto;">
+            <div class="section-header">
                 <h2>Contact Quiet Help Inc.</h2>
-                <p>Have questions or need support? Reach out to our official team.</p>
+                <p>Reach out to our official administrative team for support or inquiries.</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
-                <div>
-                    <h3 style="margin-bottom: 1rem;">Get In Touch</h3>
-                    <p style="margin-bottom: 1.5rem;">We respond to all verified inquiries within 1-2 business days.</p>
-                    <p><strong>Official Entity:</strong> Quiet Help Inc.</p>
-                    <p><strong>Tax EIN:</strong> 85-0600914</p>
-                    <p><strong>Official Email:</strong> <a href="mailto:query@quiethelpinc.bond" style="color: var(--primary);">query@quiethelpinc.bond</a></p>
-                    <p><strong>Domain:</strong> quiethelpinc.bond</p>
-                    <p><strong>Mailing Address:</strong> 90 Woodbridge Center Drive, Suite 505, Woodbridge, NJ 07095</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div class="contact-box">
+                    <h3>Contact Information</h3>
+                    <div class="contact-detail">
+                        <span>Legal Entity Name</span>
+                        <strong>Quiet Help Inc.</strong>
+                    </div>
+                    <div class="contact-detail">
+                        <span>Federal Tax ID (EIN)</span>
+                        <strong>85-0600914</strong>
+                    </div>
+                    <div class="contact-detail">
+                        <span>Official Email Address</span>
+                        <a href="mailto:query@quiethelpinc.bond">query@quiethelpinc.bond</a>
+                    </div>
+                    <div class="contact-detail">
+                        <span>Official Website Domain</span>
+                        <a href="https://quiethelpinc.bond">quiethelpinc.bond</a>
+                    </div>
+                    <div class="contact-detail">
+                        <span>Mailing Address</span>
+                        <strong>90 Woodbridge Center Drive, Suite 505<br>Woodbridge, NJ 07095</strong>
+                    </div>
                 </div>
 
-                <form onsubmit="event.preventDefault(); alert('Thank you for contacting Quiet Help Inc. Your message has been sent to query@quiethelpinc.bond.');" style="display: flex; flex-direction: column; gap: 1rem;">
-                    <input type="text" placeholder="Full Name" required style="padding: 0.8rem; border: 1px solid var(--gray-200); border-radius: 8px;">
-                    <input type="email" placeholder="Email Address (e.g., query@quiethelpinc.bond)" required style="padding: 0.8rem; border: 1px solid var(--gray-200); border-radius: 8px;">
-                    <textarea rows="4" placeholder="How can Quiet Help Inc. assist you?" required style="padding: 0.8rem; border: 1px solid var(--gray-200); border-radius: 8px;"></textarea>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+                <div class="contact-box">
+                    <h3>Send Us A Message</h3>
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully to query@quiethelpinc.bond!');">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" placeholder="How can Quiet Help Inc. assist you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Comprehensive Footer -->
     <footer>
         <div class="footer-grid">
-            <div>
-                <a href="#" class="logo" style="color: var(--white); margin-bottom: 1rem;">
-                    <div class="logo-icon">Q</div> Quiet Help Inc.
-                </a>
-                <p style="font-size: 0.9rem; color: var(--gray-200);">Quiet Help Inc. is a registered 501(c)(3) nonprofit organization (EIN: 85-0600914). Official domain: quiethelpinc.bond.</p>
+            <div class="footer-brand">
+                <h3>Quiet Help Inc.</h3>
+                <p>Quiet Help Inc. is an officially recognized 501(c)(3) non-profit organization dedicated to compassionate community support and direct aid.</p>
+                <p><strong>EIN:</strong> 85-0600914<br><strong>Domain:</strong> quiethelpinc.bond</p>
             </div>
+
             <div class="footer-col">
                 <h4>Navigation</h4>
                 <ul>
                     <li><a href="#about">About Us</a></li>
-                    <li><a href="#programs">Programs</a></li>
-                    <li><a href="#impact">Impact</a></li>
+                    <li><a href="#programs">Our Programs</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </div>
+
             <div class="footer-col">
-                <h4>Compliance</h4>
+                <h4>Legal & Policies</h4>
                 <ul>
-                    <li><a href="#policies">Privacy Policy</a></li>
-                    <li><a href="#policies">Terms of Service</a></li>
-                    <li><a href="#policies">Nondiscrimination</a></li>
+                    <li><a href="#privacy-policy">Privacy Policy</a></li>
+                    <li><a href="#terms-of-use">Terms of Use</a></li>
+                    <li><a href="#nondiscrimination">Nondiscrimination</a></li>
                 </ul>
             </div>
+
             <div class="footer-col">
-                <h4>Contact</h4>
+                <h4>Contact Details</h4>
                 <ul>
+                    <li>Quiet Help Inc.</li>
+                    <li>90 Woodbridge Center Dr, Suite 505</li>
+                    <li>Woodbridge, NJ 07095</li>
                     <li><a href="mailto:query@quiethelpinc.bond">query@quiethelpinc.bond</a></li>
-                    <li>quiethelpinc.bond</li>
                 </ul>
             </div>
         </div>
 
         <div class="footer-bottom">
             <div>&copy; 2026 Quiet Help Inc. All rights reserved.</div>
-            <div>quiethelpinc.bond is an official domain of Quiet Help Inc. (EIN: 85-0600914)</div>
+            <div><code>quiethelpinc.bond</code> is an official domain of Quiet Help Inc. (EIN: 85-0600914)[cite: 1]</div>
         </div>
     </footer>
 
-    <!-- Interactive Tabs JS -->
-    <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].classList.remove("active");
-            }
-            tablinks = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
-    </script>
 </body>
 </html>
