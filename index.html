@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiet Help Inc. | Official Non-Profit Organization</title>
-    <meta name="description" content="Quiet Help Inc. (EIN: 85-0600914) provides compassionate, dignified assistance, essential supplies, and supportive community programs. Official domain: quiethelpinc.bond.">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Quiet Help Inc. | Empowering Communities with Dignity</title>
+    <meta name="description" content="Quiet Help Inc. (EIN: 85-0600914) provides compassionate assistance, direct community relief, and essential support. Official domain: quiethelpinc.bond.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0f172a;
-            --primary-accent: #2563eb;
-            --secondary: #0d9488;
-            --accent: #d97706;
+            --primary: #064e3b;
+            --primary-accent: #059669;
+            --emerald-light: #ecfdf5;
+            --secondary: #0f172a;
+            --accent-gold: #d97706;
             --light-bg: #f8fafc;
             --card-bg: #ffffff;
             --text-main: #334155;
             --text-dark: #0f172a;
-            --text-light: #64748b;
+            --text-muted: #64748b;
             --border: #e2e8f0;
             --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --radius: 16px;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -34,20 +36,21 @@
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-family: 'Outfit', sans-serif;
             color: var(--text-main);
             background-color: var(--light-bg);
             line-height: 1.7;
         }
 
-        h1, h2, h3, h4, .serif {
-            font-family: 'Playfair Display', serif;
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
             color: var(--text-dark);
+            letter-spacing: -0.02em;
         }
 
         /* Top Compliance Banner */
         .top-banner {
-            background-color: var(--primary);
+            background-color: var(--secondary);
             color: #f1f5f9;
             font-size: 0.85rem;
             padding: 10px 5%;
@@ -56,7 +59,7 @@
         }
 
         .top-banner strong {
-            color: #38bdf8;
+            color: #34d399;
         }
 
         /* Header Navigation */
@@ -89,11 +92,11 @@
         }
 
         .logo-badge {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, var(--primary-accent), var(--secondary));
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-accent));
             color: white;
-            border-radius: 10px;
+            border-radius: 12px;
             display: grid;
             place-items: center;
             font-weight: 700;
@@ -135,12 +138,13 @@
         .btn-primary {
             background: var(--primary-accent);
             color: #ffffff;
-            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+            background: var(--primary);
+            box-shadow: 0 6px 20px rgba(6, 78, 59, 0.4);
         }
 
         .btn-outline {
@@ -157,7 +161,7 @@
         /* Hero Section */
         .hero {
             padding: 5rem 5% 6rem;
-            background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+            background: linear-gradient(180deg, var(--emerald-light) 0%, #f8fafc 100%);
         }
 
         .hero-container {
@@ -173,11 +177,12 @@
             font-size: 3.5rem;
             line-height: 1.15;
             margin-bottom: 1.5rem;
+            color: var(--primary);
         }
 
         .hero-text p {
             font-size: 1.15rem;
-            color: var(--text-light);
+            color: var(--text-muted);
             margin-bottom: 2rem;
         }
 
@@ -189,11 +194,12 @@
 
         .hero-gallery img {
             width: 100%;
-            height: 230px;
+            height: 220px;
             object-fit: cover;
-            border-radius: 16px;
+            border-radius: var(--radius);
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
+            background-color: #cbd5e1;
         }
 
         .hero-gallery img:hover {
@@ -201,14 +207,14 @@
             box-shadow: var(--shadow-lg);
         }
 
-        /* Verification Notice Card */
+        /* Verification Card */
         .notice-card {
             max-width: 1300px;
             margin: -2rem auto 4rem;
             background: var(--card-bg);
             border-left: 5px solid var(--primary-accent);
             padding: 1.5rem 2rem;
-            border-radius: 12px;
+            border-radius: var(--radius);
             box-shadow: var(--shadow-lg);
         }
 
@@ -220,7 +226,7 @@
 
         /* Section Layouts */
         .section {
-            padding: 6rem 5%;
+            padding: 5rem 5%;
             max-width: 1300px;
             margin: 0 auto;
         }
@@ -236,13 +242,13 @@
         }
 
         .section-header p {
-            color: var(--text-light);
+            color: var(--text-muted);
             max-width: 650px;
             margin: 0 auto;
             font-size: 1.1rem;
         }
 
-        /* Grid Layouts */
+        /* Cards with Reliable Placeholder Fail-safes */
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -251,7 +257,7 @@
 
         .card {
             background: var(--card-bg);
-            border-radius: 16px;
+            border-radius: var(--radius);
             overflow: hidden;
             box-shadow: var(--shadow-sm);
             border: 1px solid var(--border);
@@ -267,6 +273,8 @@
             width: 100%;
             height: 220px;
             object-fit: cover;
+            background-color: var(--emerald-light);
+            display: block;
         }
 
         .card-body {
@@ -278,11 +286,32 @@
             margin-bottom: 0.8rem;
         }
 
-        /* Contact Box Info */
+        /* Additional Landing Page Content Blocks */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .pillar-item {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .pillar-item h4 {
+            color: var(--primary-accent);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Details Layout */
         .contact-box {
             background: #ffffff;
             padding: 2.5rem;
-            border-radius: 16px;
+            border-radius: var(--radius);
             border: 1px solid var(--border);
             box-shadow: var(--shadow-sm);
         }
@@ -302,7 +331,7 @@
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: var(--text-light);
+            color: var(--text-muted);
             font-weight: 600;
         }
 
@@ -310,10 +339,6 @@
             font-size: 1.1rem;
             color: var(--text-dark);
             text-decoration: none;
-        }
-
-        .contact-detail a:hover {
-            color: var(--primary-accent);
         }
 
         .contact-form {
@@ -333,7 +358,7 @@
 
         /* Footer */
         footer {
-            background: var(--primary);
+            background: var(--secondary);
             color: #cbd5e1;
             padding: 5rem 5% 2rem;
         }
@@ -397,7 +422,7 @@
             font-size: 0.9rem;
         }
 
-        /* Dedicated Policy Modal Sub-Page Styles */
+        /* Full Policy Pages (Modals) */
         .modal-page {
             display: none;
             position: fixed;
@@ -405,7 +430,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(15, 23, 42, 0.8);
+            background: rgba(15, 23, 42, 0.85);
             backdrop-filter: blur(8px);
             z-index: 2000;
             overflow-y: auto;
@@ -417,7 +442,7 @@
             max-width: 900px;
             margin: 0 auto;
             padding: 3.5rem;
-            border-radius: 20px;
+            border-radius: var(--radius);
             box-shadow: var(--shadow-lg);
             position: relative;
         }
@@ -445,7 +470,7 @@
 
         .policy-meta {
             font-size: 0.9rem;
-            color: var(--text-light);
+            color: var(--text-muted);
             margin-bottom: 2rem;
             border-bottom: 1px solid var(--border);
             padding-bottom: 1rem;
@@ -458,7 +483,6 @@
 
         .policy-content p, .policy-content ul {
             margin-bottom: 1rem;
-            color: var(--text-main);
         }
 
         .policy-content ul {
@@ -477,12 +501,12 @@
 </head>
 <body>
 
-    <!-- Official Banner -->
+    <!-- Compliance Banner -->
     <div class="top-banner">
         <strong>Official Notice:</strong> <code>quiethelpinc.bond</code> is an officially recognized website domain operated by <strong>Quiet Help Inc.</strong> (EIN: 85-0600914).
     </div>
 
-    <!-- Main Navigation Header -->
+    <!-- Navigation -->
     <header>
         <div class="nav-container">
             <a href="#" class="logo">
@@ -492,6 +516,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#programs">Programs</a></li>
+                <li><a href="#approach">Our Approach</a></li>
                 <li><a href="#impact">Our Impact</a></li>
                 <li><a onclick="openModal('privacyModal')">Privacy Policy</a></li>
                 <li><a onclick="openModal('termsModal')">Terms of Use</a></li>
@@ -500,24 +525,22 @@
         </div>
     </header>
 
-    <!-- LANDING PAGE CONTENT (Exclusively Non-Profit Information) -->
-
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-text">
-                <h1>Compassionate, Dignified Aid for Communities in Need</h1>
-                <p>Quiet Help Inc. is a registered 501(c)(3) nonprofit delivering direct relief, emergency assistance, and vital resources without barriers, stigma, or complexity.</p>
+                <h1>Quiet Relief. Lasting Human Impact.</h1>
+                <p>Quiet Help Inc. is a registered 501(c)(3) nonprofit providing rapid financial support, vital essential supplies, and long-term aid directly to families facing unexpected hardship.</p>
                 <div style="display: flex; gap: 1rem;">
-                    <a href="#programs" class="btn btn-primary">Our Programs</a>
-                    <a href="#contact" class="btn btn-outline">Get Support</a>
+                    <a href="#programs" class="btn btn-primary">Explore Programs</a>
+                    <a href="#contact" class="btn btn-outline">Request Support</a>
                 </div>
             </div>
             <div class="hero-gallery">
-                <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=800&q=80" alt="Community Outreach">
-                <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=800&q=80" alt="Volunteers at Work">
-                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80" alt="Relief Supplies Distribution">
-                <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80" alt="Supportive Services">
+                <img src="https://picsum.photos/id/1005/600/400" alt="Community Support">
+                <img src="https://picsum.photos/id/1025/600/400" alt="Care and Relief">
+                <img src="https://picsum.photos/id/1062/600/400" alt="Essential Distribution">
+                <img src="https://picsum.photos/id/1074/600/400" alt="Empowerment Initiatives">
             </div>
         </div>
     </section>
@@ -525,9 +548,9 @@
     <!-- Google Workspace / Official Domain Notice Box -->
     <div style="padding: 0 5%;">
         <div class="notice-card">
-            <h3>Google Workspace for Nonprofits Verification Notice</h3>
+            <h3>Google Workspace for Nonprofits & Organization Verification</h3>
             <p>
-                <strong>Quiet Help Inc.</strong> (EIN: 85-0600914) formally confirms that <strong>quiethelpinc.bond</strong> is our primary organizational website and communications domain[cite: 1]. All organization correspondence and Google Workspace accounts are registered under <code>query@quiethelpinc.bond</code>[cite: 1].
+                <strong>Quiet Help Inc.</strong> (EIN: 85-0600914) formally confirms that <strong>quiethelpinc.bond</strong> is our primary organizational website and communications domain[cite: 1]. All organization correspondence and Google Workspace accounts are managed under <code>query@quiethelpinc.bond</code>[cite: 1].
             </p>
         </div>
     </div>
@@ -536,25 +559,25 @@
     <section id="about" class="section">
         <div class="section-header">
             <h2>About Quiet Help Inc.</h2>
-            <p>Providing direct support and empowering communities through transparent, respectful non-profit initiatives.</p>
+            <p>Providing direct, dignified support through transparent and compassionate nonprofit initiatives.</p>
         </div>
         <div class="grid-3">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?auto=format&fit=crop&w=800&q=80" alt="Our Mission">
+                <img src="https://picsum.photos/id/1015/600/400" alt="Our Mission">
                 <div class="card-body">
                     <h3>Our Mission</h3>
                     <p>To extend rapid, compassionate relief and financial assistance to individuals and families experiencing acute hardship, protecting personal dignity every step of the way.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80" alt="Our Vision">
+                <img src="https://picsum.photos/id/1018/600/400" alt="Our Vision">
                 <div class="card-body">
                     <h3>Our Vision</h3>
                     <p>A connected community where immediate assistance and emergency resources are accessible to everyone in need without unnecessary administrative delay.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=80" alt="Core Values">
+                <img src="https://picsum.photos/id/1043/600/400" alt="Core Values">
                 <div class="card-body">
                     <h3>Core Values</h3>
                     <p>Unwavering integrity, strict applicant confidentiality, equitable support distribution, and total operational transparency across all programs.</p>
@@ -567,115 +590,141 @@
     <section id="programs" class="section" style="background: #ffffff; max-width: 100%;">
         <div style="max-width: 1300px; margin: 0 auto;">
             <div class="section-header">
-                <h2>Our Key Programs</h2>
-                <p>Designed to deliver direct relief and long-term empowerment to those we serve.</p>
+                <h2>Our Primary Programs</h2>
+                <p>Delivering practical, targeted relief designed to alleviate immediate crisis.</p>
             </div>
             <div class="grid-3">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?auto=format&fit=crop&w=800&q=80" alt="Emergency Grants">
+                    <img src="https://picsum.photos/id/1048/600/400" alt="Emergency Micro-Grants">
                     <div class="card-body">
                         <h3>Emergency Micro-Grants</h3>
-                        <p>Providing swift financial support for vital needs including housing stability, utility relief, and emergency medical expense coverage.</p>
+                        <p>Providing swift financial aid for housing stability, emergency medical expenses, and utility bill assistance during crisis moments.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1593113630400-ea4288922497?auto=format&fit=crop&w=800&q=80" alt="Essential Supplies">
+                    <img src="https://picsum.photos/id/1060/600/400" alt="Essential Care Supplies">
                     <div class="card-body">
-                        <h3>Essential Aid & Supplies</h3>
-                        <p>Direct supply distribution offering essential nutritional packages, hygiene care kits, and emergency family resources.</p>
+                        <h3>Essential Care Supplies</h3>
+                        <p>Distributing nutritional packages, hygiene care items, and essential household goods directly to families in need.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Community Pathways">
+                    <img src="https://picsum.photos/id/1069/600/400" alt="Pathways to Stability">
                     <div class="card-body">
-                        <h3>Community Pathways</h3>
-                        <p>Mentorship, employment guidance, and resource navigation to help individuals transition from immediate crisis to long-term independence.</p>
+                        <h3>Pathways to Stability</h3>
+                        <p>Providing resume help, resource navigation, and individualized guidance to help beneficiaries regain self-sufficiency.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Additional Content Section: Strategic Approach -->
+    <section id="approach" class="section">
+        <div class="section-header">
+            <h2>Our Operational Approach</h2>
+            <p>How we ensure fast delivery, strict privacy, and maximum stewardship of resources.</p>
+        </div>
+        <div class="pillars-grid">
+            <div class="pillar-item">
+                <h4>1. Low Friction Requests</h4>
+                <p>We streamline verification to ensure aid reaches applicants when they need it most without bureaucratic hurdles.</p>
+            </div>
+            <div class="pillar-item">
+                <h4>2. Total Discretion</h4>
+                <p>We prioritize personal privacy, ensuring aid is delivered without public exposure or unnecessary documentation exposure.</p>
+            </div>
+            <div class="pillar-item">
+                <h4>3. Direct Partner Network</h4>
+                <p>We collaborate with community organizations, health centers, and local leaders to identify gaps in aid coverage.</p>
+            </div>
+            <div class="pillar-item">
+                <h4>4. Accountable Governance</h4>
+                <p>Our operations adhere strictly to 501(c)(3) guidelines, maintaining audit-ready financial records and policies.</p>
             </div>
         </div>
     </section>
 
     <!-- Impact Section -->
-    <section id="impact" class="section">
-        <div class="section-header">
-            <h2>Our Community Impact</h2>
-            <p>Direct actions transforming lives quietly and effectively across our region.</p>
-        </div>
-        <div class="grid-3">
-            <div style="text-align: center; padding: 2.5rem; background: #ffffff; border-radius: 16px; border: 1px solid var(--border);">
-                <h3 style="font-size: 3rem; color: var(--primary-accent); margin-bottom: 0.5rem;">500+</h3>
-                <p><strong>Families Supported</strong><br>Receiving direct food and emergency supplies.</p>
+    <section id="impact" class="section" style="background: #ffffff; max-width: 100%;">
+        <div style="max-width: 1300px; margin: 0 auto;">
+            <div class="section-header">
+                <h2>Our Community Impact</h2>
+                <p>Direct actions transforming lives quietly and effectively across our region.</p>
             </div>
-            <div style="text-align: center; padding: 2.5rem; background: #ffffff; border-radius: 16px; border: 1px solid var(--border);">
-                <h3 style="font-size: 3rem; color: var(--secondary); margin-bottom: 0.5rem;">100%</h3>
-                <p><strong>Confidential Support</strong><br>Dignified aid delivery with zero public exposure.</p>
-            </div>
-            <div style="text-align: center; padding: 2.5rem; background: #ffffff; border-radius: 16px; border: 1px solid var(--border);">
-                <h3 style="font-size: 3rem; color: var(--accent); margin-bottom: 0.5rem;">24/48h</h3>
-                <p><strong>Rapid Response</strong><br>Fast turnarounds for emergency grant reviews.</p>
+            <div class="grid-3">
+                <div style="text-align: center; padding: 2.5rem; background: var(--light-bg); border-radius: var(--radius); border: 1px solid var(--border);">
+                    <h3 style="font-size: 3rem; color: var(--primary-accent); margin-bottom: 0.5rem;">500+</h3>
+                    <p><strong>Families Assisted</strong><br>Direct aid delivered for emergency relief.</p>
+                </div>
+                <div style="text-align: center; padding: 2.5rem; background: var(--light-bg); border-radius: var(--radius); border: 1px solid var(--border);">
+                    <h3 style="font-size: 3rem; color: var(--primary); margin-bottom: 0.5rem;">100%</h3>
+                    <p><strong>Confidential Processing</strong><br>Protecting privacy across all applications.</p>
+                </div>
+                <div style="text-align: center; padding: 2.5rem; background: var(--light-bg); border-radius: var(--radius); border: 1px solid var(--border);">
+                    <h3 style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 0.5rem;">24/48h</h3>
+                    <p><strong>Rapid Response Time</strong><br>Fast turnarounds for urgent micro-grant reviews.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Page Section -->
-    <section id="contact" class="section" style="background: #ffffff; max-width: 100%;">
-        <div style="max-width: 1300px; margin: 0 auto;">
-            <div class="section-header">
-                <h2>Contact Quiet Help Inc.</h2>
-                <p>Reach out to our official administrative team for support or inquiries.</p>
+    <section id="contact" class="section">
+        <div class="section-header">
+            <h2>Contact Quiet Help Inc.</h2>
+            <p>Reach out to our administrative team for support or verification inquiries.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+            <div class="contact-box">
+                <h3>Contact Information</h3>
+                <div class="contact-detail">
+                    <span>Legal Entity Name</span>
+                    <strong>Quiet Help Inc.</strong>
+                </div>
+                <div class="contact-detail">
+                    <span>Federal Tax ID (EIN)</span>
+                    <strong>85-0600914</strong>
+                </div>
+                <div class="contact-detail">
+                    <span>Official Email Address</span>
+                    <a href="mailto:query@quiethelpinc.bond">query@quiethelpinc.bond</a>
+                </div>
+                <div class="contact-detail">
+                    <span>Official Domain</span>
+                    <a href="https://quiethelpinc.bond">quiethelpinc.bond</a>
+                </div>
+                <div class="contact-detail">
+                    <span>Mailing Address</span>
+                    <strong>90 Woodbridge Center Drive, Suite 505<br>Woodbridge, NJ 07095</strong>
+                </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
-                <div class="contact-box">
-                    <h3>Contact Information</h3>
-                    <div class="contact-detail">
-                        <span>Legal Entity Name</span>
-                        <strong>Quiet Help Inc.</strong>
+            <div class="contact-box">
+                <h3>Send Us A Message</h3>
+                <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully to query@quiethelpinc.bond!');">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Full Name" required>
                     </div>
-                    <div class="contact-detail">
-                        <span>Federal Tax ID (EIN)</span>
-                        <strong>85-0600914</strong>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email Address" required>
                     </div>
-                    <div class="contact-detail">
-                        <span>Official Email Address</span>
-                        <a href="mailto:query@quiethelpinc.bond">query@quiethelpinc.bond</a>
+                    <div class="form-group">
+                        <textarea rows="5" placeholder="How can Quiet Help Inc. assist you?" required></textarea>
                     </div>
-                    <div class="contact-detail">
-                        <span>Official Website Domain</span>
-                        <a href="https://quiethelpinc.bond">quiethelpinc.bond</a>
-                    </div>
-                    <div class="contact-detail">
-                        <span>Mailing Address</span>
-                        <strong>90 Woodbridge Center Drive, Suite 505<br>Woodbridge, NJ 07095</strong>
-                    </div>
-                </div>
-
-                <div class="contact-box">
-                    <h3>Send Us A Message</h3>
-                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully to query@quiethelpinc.bond!');">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Full Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email Address" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea rows="5" placeholder="How can Quiet Help Inc. assist you?" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Comprehensive Footer -->
+    <!-- Footer -->
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
                 <h3>Quiet Help Inc.</h3>
-                <p>Quiet Help Inc. is an officially recognized 501(c)(3) non-profit organization dedicated to compassionate community support and direct aid.</p>
+                <p>Quiet Help Inc. is a registered 501(c)(3) non-profit organization dedicated to direct community assistance and compassionate relief.</p>
                 <p><strong>EIN:</strong> 85-0600914<br><strong>Domain:</strong> quiethelpinc.bond</p>
             </div>
 
@@ -684,6 +733,7 @@
                 <ul>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#programs">Our Programs</a></li>
+                    <li><a href="#approach">Our Approach</a></li>
                     <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </div>
@@ -714,10 +764,9 @@
         </div>
     </footer>
 
+    <!-- POLICY MODALS (Open in separate sub-pages) -->
 
-    <!-- DEDICATED FULL POLICY PAGES (MODALS) -->
-
-    <!-- Modal 1: Privacy Policy Page -->
+    <!-- Modal 1: Privacy Policy -->
     <div id="privacyModal" class="modal-page">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('privacyModal')">&times;</button>
@@ -747,7 +796,7 @@
                 </ul>
 
                 <h3>3. Confidentiality and Information Sharing</h3>
-                <p>We maintain strict privacy controls. <strong>Quiet Help Inc. does not sell, rent, lease, or trade personal data or donor information to any third parties under any circumstances.</strong> Data is shared only with trusted third-party service providers who directly enable our operations (e.g., email delivery, web hosting) under confidential contracts.</p>
+                <p>We maintain strict privacy controls. <strong>Quiet Help Inc. does not sell, rent, lease, or trade personal data or donor information to any third parties under any circumstances.</strong> Data is shared only with trusted third-party service providers who directly enable our operations under confidential contracts.</p>
 
                 <h3>4. Contact Regarding Privacy</h3>
                 <p>If you have questions regarding this Privacy Policy or wish to request data removal, please contact our Privacy Coordinator at:</p>
@@ -760,7 +809,7 @@
         </div>
     </div>
 
-    <!-- Modal 2: Terms of Use Page -->
+    <!-- Modal 2: Terms of Use -->
     <div id="termsModal" class="modal-page">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('termsModal')">&times;</button>
@@ -783,7 +832,7 @@
                 <p>All original content, logos, branding, graphics, and written materials on <code>quiethelpinc.bond</code> are the property of Quiet Help Inc. Content may not be republished or distributed without explicit written consent.</p>
 
                 <h3>4. Disclaimer & Limitation of Liability</h3>
-                <p>All information on this site is provided "as is" without warranty of any kind. While Quiet Help Inc. strives to maintain modern accuracy, we shall not be held liable for any damages resulting from reliance on site content or temporary site downtime.</p>
+                <p>All information on this site is provided "as is" without warranty of any kind. While Quiet Help Inc. strives to maintain accuracy, we shall not be held liable for any damages resulting from reliance on site content or temporary site downtime.</p>
 
                 <h3>5. Contact Information</h3>
                 <p>For questions concerning these Terms of Use, please reach out directly to:</p>
@@ -796,7 +845,7 @@
         </div>
     </div>
 
-    <!-- Modal 3: Nondiscrimination Policy Page -->
+    <!-- Modal 3: Nondiscrimination Policy -->
     <div id="nondiscrimModal" class="modal-page">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('nondiscrimModal')">&times;</button>
@@ -813,7 +862,7 @@
         </div>
     </div>
 
-    <!-- JavaScript to Handle Opening / Closing Policy Sub-Pages -->
+    <!-- Modal JavaScript -->
     <script>
         function openModal(id) {
             document.getElementById(id).style.display = 'block';
@@ -825,7 +874,6 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Close modal if user clicks outside of modal content
         window.onclick = function(event) {
             if (event.target.classList.contains('modal-page')) {
                 event.target.style.display = "none";
@@ -833,6 +881,5 @@
             }
         }
     </script>
-
 </body>
 </html>
