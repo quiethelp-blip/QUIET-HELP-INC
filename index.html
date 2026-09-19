@@ -6,6 +6,43 @@
     <title>Quiet Help Inc. | Empowering Communities with Dignity</title>
     <meta name="description" content="Quiet Help Inc. (EIN: 85-0600914) provides compassionate assistance, direct community relief, and essential support. Official domain: quiethelpinc.bond.">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Global site tag (gtag.js) - Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18225770213"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18225770213');
+    </script>
+
+    <!-- Google Ads Conversion Snippet -->
+    <script>
+      // Page View Conversion Event
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18225770213/5BZ0CPSugP0cEOXd3PJD',
+          'value': 1.0,
+          'currency': 'USD'
+      });
+
+      // Click/Form Submit Conversion Function
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-18225770213/5BZ0CPSugP0cEOXd3PJD',
+            'value': 1.0,
+            'currency': 'USD',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
+
     <style>
         :root {
             --primary: #064e3b;
@@ -550,7 +587,7 @@
         <div class="notice-card">
             <h3>Google Workspace for Nonprofits & Organization Verification</h3>
             <p>
-                <strong>Quiet Help Inc.</strong> (EIN: 85-0600914) formally confirms that <strong>quiethelpinc.bond</strong> is our primary organizational website and communications domain[cite: 1]. All organization correspondence and Google Workspace accounts are managed under <code>query@quiethelpinc.bond</code>[cite: 1].
+                <strong>Quiet Help Inc.</strong> (EIN: 85-0600914) formally confirms that <strong>quiethelpinc.bond</strong> is our primary organizational website and communications domain. All organization correspondence and Google Workspace accounts are managed under <code>query@quiethelpinc.bond</code>.
             </p>
         </div>
     </div>
@@ -703,7 +740,7 @@
 
             <div class="contact-box">
                 <h3>Send Us A Message</h3>
-                <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully to query@quiethelpinc.bond!');">
+                <form class="contact-form" onsubmit="gtag_report_conversion(); event.preventDefault(); alert('Message sent successfully to query@quiethelpinc.bond!');">
                     <div class="form-group">
                         <input type="text" placeholder="Your Full Name" required>
                     </div>
@@ -760,11 +797,11 @@
 
         <div class="footer-bottom">
             <div>&copy; 2026 Quiet Help Inc. All rights reserved.</div>
-            <div><code>quiethelpinc.bond</code> is an official domain of Quiet Help Inc. (EIN: 85-0600914)[cite: 1]</div>
+            <div><code>quiethelpinc.bond</code> is an official domain of Quiet Help Inc. (EIN: 85-0600914)</div>
         </div>
     </footer>
 
-    <!-- POLICY MODALS (Open in separate sub-pages) -->
+    <!-- POLICY MODALS -->
 
     <!-- Modal 1: Privacy Policy -->
     <div id="privacyModal" class="modal-page">
@@ -829,35 +866,7 @@
                 <p>Users agree to use this site strictly for lawful purposes. You agree not to submit fraudulent assistance applications, attempt unauthorized system access, or use official contacts (such as <code>query@quiethelpinc.bond</code>) for unauthorized advertising or spam.</p>
 
                 <h3>3. Intellectual Property</h3>
-                <p>All original content, logos, branding, graphics, and written materials on <code>quiethelpinc.bond</code> are the property of Quiet Help Inc. Content may not be republished or distributed without explicit written consent.</p>
-
-                <h3>4. Disclaimer & Limitation of Liability</h3>
-                <p>All information on this site is provided "as is" without warranty of any kind. While Quiet Help Inc. strives to maintain accuracy, we shall not be held liable for any damages resulting from reliance on site content or temporary site downtime.</p>
-
-                <h3>5. Contact Information</h3>
-                <p>For questions concerning these Terms of Use, please reach out directly to:</p>
-                <p>
-                    <strong>Quiet Help Inc.</strong><br>
-                    90 Woodbridge Center Drive, Suite 505, Woodbridge, NJ 07095<br>
-                    Email: <a href="mailto:query@quiethelpinc.bond">query@quiethelpinc.bond</a>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 3: Nondiscrimination Policy -->
-    <div id="nondiscrimModal" class="modal-page">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('nondiscrimModal')">&times;</button>
-            <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Nondiscrimination Policy</h2>
-            <div class="policy-meta">
-                <strong>Organization:</strong> Quiet Help Inc. (EIN: 85-0600914) | 
-                <strong>Domain:</strong> quiethelpinc.bond
-            </div>
-            <div class="policy-content">
-                <p>Quiet Help Inc. is committed to maintaining an environment free from discrimination across all aspects of its operations.</p>
-                <p>Quiet Help Inc. does not and shall not discriminate on the basis of race, color, religion (creed), gender, gender expression, age, national origin (ancestry), disability, marital status, sexual orientation, or military status in any of its activities or operations.</p>
-                <p>These activities include, but are not limited to, program candidate evaluation, distribution of charitable grants, selection of volunteers and vendors, and employment practices.</p>
+                <p>All content on this site is protected by copyright laws. You may not reproduce, distribute, or create derivative works without express permission.</p>
             </div>
         </div>
     </div>
@@ -868,17 +877,9 @@
             document.getElementById(id).style.display = 'block';
             document.body.style.overflow = 'hidden';
         }
-
         function closeModal(id) {
             document.getElementById(id).style.display = 'none';
             document.body.style.overflow = 'auto';
-        }
-
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal-page')) {
-                event.target.style.display = "none";
-                document.body.style.overflow = 'auto';
-            }
         }
     </script>
 </body>
